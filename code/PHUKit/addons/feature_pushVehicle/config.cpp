@@ -1,11 +1,9 @@
-#include "script_component.hpp"
-
 class CfgPatches {
   class PHK_feature_pushVehicle {
     name = "PHUKit - Push Vehicle";
     author = "Your Team";
     requiredVersion = 2.06;
-    requiredAddons[] = {"PHK_core","cba_main"};
+    requiredAddons[] = {"PHK_core"};
     units[] = {};
     weapons[] = {};
     version = "1.0.0";
