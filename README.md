@@ -1,2 +1,2 @@
-# Phoenix-Helper-Utility-Kit
+# (PHUKit) Phoenix-Helper-Utility-Kit
 My Collection of Utility-kit addons for simple quality of life improvements for Arma 3, spanning Gameplay, Mission-Making, Zeus'ing, and More.
