@@ -4,7 +4,7 @@
  */
 params [["_unit", objNull, [objNull]]];
 if (isNull _unit) exitWith {};
-if !(["feature_pushVehicle"] call PHK_fnc_isFeatureEnabled) exitWith { hint "Push disabled by server."; };
+if !(["Feature_PushVehicle"] call PHK_fnc_isFeatureEnabled) exitWith { hint "Push disabled by server."; };
 
 if !([_unit] call PHK_fnc_canPush) exitWith {};
 

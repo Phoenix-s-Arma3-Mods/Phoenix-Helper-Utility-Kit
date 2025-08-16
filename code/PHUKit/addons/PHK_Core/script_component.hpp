@@ -10,7 +10,7 @@
 #define QGVAR(var) QUOTE(GVAR(var))
 #define DFUNC(var) TRIPLES(PREFIX,fnc,var)
 
-#define QPATHTOF_REL(var) \PHUKit\core\var
+#define QPATHTOF_REL(var) \core\var
 
 // Simple logger
 #define LOG(M) diag_log text format ["[%1|%2] %3", QUOTE(PREFIX), QUOTE(COMPONENT), M]

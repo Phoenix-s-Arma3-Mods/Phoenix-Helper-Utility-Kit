@@ -14,14 +14,14 @@ if (isNil "CBA_fnc_addSetting") exitWith {}; // CBA safeguard
 private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
 
 // Example client preference used by multiple features (adjust as you like)
-[
-  "PHK_client_hintDuration",
-  "SLIDER",
-  ["Hint Duration (s)", "How long short notifications stay on screen."],
-  _cat,
-  [0.5, 5, 1.2, 1],
-  0 // client setting
-] call CBA_fnc_addSetting;
+// [
+//   "PHK_client_hintDuration",
+//   "SLIDER",
+//   ["Hint Duration (s)", "How long short notifications stay on screen."],
+//   _cat,
+//   [0.5, 5, 1.2, 1],
+//   0 // client setting
+// ] call CBA_fnc_addSetting;
 
 
 // Global toggle (server-enforced)

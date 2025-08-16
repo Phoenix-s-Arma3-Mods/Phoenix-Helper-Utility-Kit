@@ -1,10 +1,11 @@
 /*
  * Client: add a context action that appears only when PHK_fnc_canPush is true.
  */
-if (!hasInterface) exitWith {};
+//OLD: if (!hasInterface) exitWith {};
+if (!hasInterface) exitWith {-1};
 
 private _p = player;
-private _id = _p getVariable ["PHK_push_actId", -1];
+private _id = _p getVariable ["PHK_push_actionId", -1];
 if (_id != -1) exitWith {}; // already added
 
 _id = _p addAction [
@@ -15,4 +16,4 @@ _id = _p addAction [
   "[_this] call PHK_fnc_canPush"
 ];
 
-_p setVariable ["PHK_push_actId", _id];
+_p setVariable ["PHK_push_actionId", _id];

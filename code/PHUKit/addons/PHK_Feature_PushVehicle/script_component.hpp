@@ -9,4 +9,4 @@
 #define QGVAR(var) QUOTE(GVAR(var))
 #define DFUNC(var) TRIPLES(PREFIX,fnc,var)
 
-#define QPATHTOF_REL(var) \PHUKit\feature_pushVehicle\var
+#define QPATHTOF_REL(var) \feature_pushVehicle\var
