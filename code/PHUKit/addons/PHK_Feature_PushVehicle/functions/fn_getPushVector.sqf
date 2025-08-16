@@ -4,10 +4,9 @@
  */
 params ["_unit", "_veh"];
 
-private _dirRad = (getDir _unit) * (pi / 180);
-private _fwd = [sin _dirRad, cos _dirRad, 0];
-
+private _fwd = vectorDirVisual _unit;
+_fwd set [2, 0];
 private _dist = missionNamespace getVariable ["PHK_pushVehicle_distance", 1.2];
-private _pushVector = _fwd vectorMultiply _dist;
+private _pushVector (_fwd vectorNormalized) vectorMultiply _dist;
 
 _pushVector
