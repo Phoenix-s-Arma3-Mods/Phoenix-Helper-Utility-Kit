@@ -7,6 +7,6 @@ params ["_unit", "_veh"];
 private _fwd = vectorDirVisual _unit;
 _fwd set [2, 0];
 private _dist = missionNamespace getVariable ["PHK_pushVehicle_distance", 1.2];
-private _pushVector (_fwd vectorNormalized) vectorMultiply _dist;
+private _pushVector = (vectorNormalized _fwd) vectorMultiply _dist;
 
 _pushVector
