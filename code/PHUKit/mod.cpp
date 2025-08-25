@@ -5,3 +5,4 @@ overview = "Internal quality-of-life helpers for various communities.";
 action = "https://steamcommunity.com/sharedfiles/filedetails/?id=3545906547";
 actionName = "Workshop Page";
 author = "Phoenix";
+requiredVersion = 2.06;

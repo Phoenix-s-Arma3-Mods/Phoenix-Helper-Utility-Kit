@@ -1,6 +1,6 @@
 class CfgPatches {
     class PHK_feature_vehicleSpawner {
-        units[] = {};
+        units[] = {"PHK_Module_AddVehicleSpawner", "PHK_Module_RemoveVehicleSpawner"};
         weapons[] = {};
         requiredAddons[] = {"cba_main", "cba_xeh", "PHK_Core"};
     };
@@ -10,10 +10,19 @@ class CfgFunctions{
     class PHK_Feature_VehicleSpawner {
         tag = "PHK";
         class Feature_VehicleSpawner {
-            file = "\phk_feature_vehiclepawner\functions";
+            file = "\phk_feature_vehiclespawner\functions";
 
             class addAction {};
-            class xxx {};
+            class canSpawn {};
+            class spawn {};
+            class findHelipad {};
+
+            class spawnServer {};
+            class markSpawnerServer {};
+            class unmarkSpawnerServer {};
+
+            class zeusAddSpawner {};
+            class zeusRemoveSpawner {};
         };
     };
 };
@@ -21,7 +30,50 @@ class CfgFunctions{
 class CfgRemoteExec {
     class Functions {
         mode = 1; jip = 1;
-        class PHK_fnc_xxx { allowedTargets = 2; };
+        class PHK_fnc_spawnServer { allowedTargets = 2; };
+        class PHK_fnc_markSpawnerServer { allowedTargets = 2; };
+        class PHK_fnc_unmarkSpawnerServer { allowedTargets = 2; };
+    };
+};
+
+class CfgFactionClasses {
+    class PHK_Modules {
+        displayName = "PHUKit";
+        priority = 2;
+        side = 7;
+    };
+};
+
+class CfgVehicles {
+    class Logic;
+    class Module_F: Logic {
+        class AttributesBase;
+    };
+
+    class PHK_Module_AddVehicleSpawner: Module_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Add Vehicle Spawner";
+        category = "PHK_Modules";
+        icon = "\A3\modules_f\data\portraitModule_ca.paa";
+        function = "PHK_fnc_zeusAddSpawner";
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        curatorCanAttach = 1;
+    };
+
+    class PHK_Module_RemoveVehicleSpawner: Module_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Remove Vehicle Spawner";
+        category = "PHK_Modules";
+        icon = "A3\modules_f\data\portraitModule_ca.paa";
+        function = "PHK_fnc_zeusRemoveSpawner";
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        curatorCanAttach = 1;
     };
 };
 

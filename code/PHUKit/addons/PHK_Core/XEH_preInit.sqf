@@ -37,3 +37,12 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
   ["Push Vehicle: Distance","How far a nudge moves the vehicle."],
   _cat, [0.2, 3, 1.2, 2], 1
 ] call CBA_fnc_addSetting;
+
+[
+  "PHK_enable_feature_vehicleSpawner",
+  "CHECKBOX",
+  ["Enable: Vehicle Spawner", "Allow use of Vehicle Spawner terminals."],
+  _cat,
+  true,
+  1
+] call CBA_fnc_addSetting;
