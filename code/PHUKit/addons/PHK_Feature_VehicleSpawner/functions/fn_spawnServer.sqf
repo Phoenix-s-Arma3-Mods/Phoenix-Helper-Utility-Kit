@@ -34,7 +34,7 @@ if ((count _near) > 0) then {
 		};
 	} forEach _near;
 
-	if {_canClear && {!isNull _emptyVehicle}} then {
+	if (_canClear && {!isNull _emptyVehicle}) then {
 		deleteVehicle _emptyVehicle;
 	} else {
 		["Cannot spawn: spawn area not clear."] remoteExec ["hint", remoteExecutedOwner];
