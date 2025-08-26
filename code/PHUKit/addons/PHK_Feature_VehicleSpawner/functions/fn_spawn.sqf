@@ -1,9 +1,9 @@
 params ["_target", "_caller", "_actionId", "_args"];
 
-if !(["Feature_VehicleSpawner"] call PHK_fnc_isFeatureEnabled) exitWith { hint "Vehicle Spawner disabled by server."; };
-if !(call PHK_fnc_canSpawn) exitWith {};
+if !(["feature_vehicleSpawner"] call PHK_fnc_isFeatureEnabled) exitWith { hint "Vehicle Spawner disabled by server."; };
+//if !(call PHK_fnc_canSpawn) exitWith {};
 
-private _terminal = cursorTarget;
+private _terminal = _target;
 if (isNull _terminal) exitWith {};
 if !(_terminal getVariable ["PHK_vehicleSpawner_isSpawner", false]) exitWith {};
 

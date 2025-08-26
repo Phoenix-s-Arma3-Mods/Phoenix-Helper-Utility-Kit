@@ -9,7 +9,8 @@ params [["_feature","",[""]]];
   // ["feature_earplugs","PHK_enable_feature_earplugs"]
 //];
 private _map = createHashMapFromArray [
-  ["Feature_PushVehicle","PHK_enable_Feature_PushVehicle"]
+  ["Feature_PushVehicle","PHK_enable_Feature_PushVehicle"],
+  ["feature_vehicleSpawner","PHK_enable_feature_vehicleSpawner"]
 ];
 
 

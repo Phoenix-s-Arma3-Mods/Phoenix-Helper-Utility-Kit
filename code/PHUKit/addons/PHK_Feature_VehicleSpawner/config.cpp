@@ -13,6 +13,8 @@ class CfgFunctions{
             file = "\phk_feature_vehiclespawner\functions";
 
             class addAction {};
+            class addActionToSpawner {};
+            class removeActionFromSpawner {};
             class canSpawn {};
             class spawn {};
             class findHelipad {};
@@ -33,6 +35,8 @@ class CfgRemoteExec {
         class PHK_fnc_spawnServer { allowedTargets = 2; };
         class PHK_fnc_markSpawnerServer { allowedTargets = 2; };
         class PHK_fnc_unmarkSpawnerServer { allowedTargets = 2; };
+        class PHK_fnc_addActionToSpawner { allowedTargets = 0; };
+        class PHK_fnc_removeActionFromSpawner { allowedTargets = 0; };
     };
 };
 
