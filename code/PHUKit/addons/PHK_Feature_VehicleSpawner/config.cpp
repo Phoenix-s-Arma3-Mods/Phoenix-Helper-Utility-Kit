@@ -24,6 +24,7 @@ class CfgFunctions{
             class unmarkSpawnerServer {};
 
             class zeusAddSpawner {};
+            class zeusCreateNewSpawnLocation {};
             class zeusRemoveSpawner {};
         };
     };
