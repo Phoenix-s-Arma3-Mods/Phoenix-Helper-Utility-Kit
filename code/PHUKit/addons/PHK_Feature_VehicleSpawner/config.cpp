@@ -1,6 +1,6 @@
 class CfgPatches {
     class PHK_feature_vehicleSpawner {
-        units[] = {"PHK_Module_AddVehicleSpawner", "PHK_Module_RemoveVehicleSpawner"};
+        units[] = {"PHK_Module_CreateVehicleSpawnLocation","PHK_Module_AddVehicleSpawner", "PHK_Module_RemoveVehicleSpawner"};
         weapons[] = {};
         requiredAddons[] = {"cba_main", "cba_xeh", "PHK_Core"};
     };

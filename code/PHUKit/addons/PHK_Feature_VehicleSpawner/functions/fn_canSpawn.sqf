@@ -8,7 +8,7 @@ if !(_terminal getVariable ["PHK_vehicleSpawner_isSpawner", false]) exitWith {fa
 private _distance = player distance _terminal;
 ["Distance check: player at " + (str (getPos player)) + ", terminal at " + (str (getPos _terminal)) + ", distance: " + (str _distance)] call PHK_fnc_log;
 
-if (_distance > 7) exitWith {false};
+if (_distance > 10) exitWith {false};
 
 // // DEBUG (comment me out later)
 // ["Vehicle spawner check passed for: " + (name _terminal) + " at distance " + (str _distance)] call PHK_fnc_log;
