@@ -65,7 +65,7 @@ class CfgVehicles {
         isGlobal = 1;
         isTriggerActivated = 0;
         curatorCanAttach = 0;
-    }
+    };
 
     class PHK_Module_AddVehicleSpawner: Module_F {
         scope = 2;
