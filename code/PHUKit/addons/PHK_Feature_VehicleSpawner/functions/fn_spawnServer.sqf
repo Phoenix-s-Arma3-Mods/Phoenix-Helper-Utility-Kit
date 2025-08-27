@@ -7,7 +7,8 @@ if !(["Feature_VehicleSpawner"] call PHK_fnc_isFeatureEnabled) exitWith {
 
 if (isNull _terminal) exitWith {};
 if !(_terminal getVariable ["PHK_vehicleSpawner_isSpawner", false]) exitWith {};
-if ((_terminal distance _pASL) > 5) exitWith {
+// my preference is distance <= 5 to action, but position issues necessitates higher server distance check... menu distance in fn_canSpawn is lower to compensate.
+if ((_terminal distance _pASL) > 10) exitWith { 
 	["Too far from terminal. Move Closer."] remoteExec ["hint", remoteExecutedOwner];
 };
 

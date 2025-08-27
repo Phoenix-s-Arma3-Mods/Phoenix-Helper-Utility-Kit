@@ -1,7 +1,6 @@
 params ["_target", "_caller", "_actionId", "_args"];
 
 if !(["feature_vehicleSpawner"] call PHK_fnc_isFeatureEnabled) exitWith { hint "Vehicle Spawner disabled by server."; };
-//if !(call PHK_fnc_canSpawn) exitWith {};
 
 private _terminal = _target;
 if (isNull _terminal) exitWith {};

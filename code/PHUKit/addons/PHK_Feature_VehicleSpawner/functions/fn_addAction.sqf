@@ -1,6 +1,6 @@
 if (!hasInterface) exitWith {-1};
 
-["Adding vehicle spawner action to player"] call PHK_fnc_log;
+// ["Adding vehicle spawner action to player"] call PHK_fnc_log; // temp DEBUG troubleshooting spawn action distance check borking
 
 private _existing = player getVariable ["PHK_vehicleSpawner_actionId", -1];
 if (_existing >= 0) then {

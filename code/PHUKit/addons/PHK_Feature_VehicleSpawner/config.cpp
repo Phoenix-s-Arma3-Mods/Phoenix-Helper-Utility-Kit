@@ -54,10 +54,23 @@ class CfgVehicles {
         class AttributesBase;
     };
 
+    class PHK_Module_CreateVehicleSpawnLocation: Module_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Create New Vehicle Spawn Location";
+        category = "PHK_Modules";
+        icon = "\A3\modules_f\data\portraitModule_ca.paa";
+        function = "PHK_fnc_zeusCreateNewSpawnLocation";
+        functionPriority = 1;
+        isGlobal = 1;
+        isTriggerActivated = 0;
+        curatorCanAttach = 0;
+    }
+
     class PHK_Module_AddVehicleSpawner: Module_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = "Add Vehicle Spawner";
+        displayName = "Add Menu - Vehicle Spawner";
         category = "PHK_Modules";
         icon = "\A3\modules_f\data\portraitModule_ca.paa";
         function = "PHK_fnc_zeusAddSpawner";
@@ -70,7 +83,7 @@ class CfgVehicles {
     class PHK_Module_RemoveVehicleSpawner: Module_F {
         scope = 2;
         scopeCurator = 2;
-        displayName = "Remove Vehicle Spawner";
+        displayName = "Remove Menu - Vehicle Spawner";
         category = "PHK_Modules";
         icon = "A3\modules_f\data\portraitModule_ca.paa";
         function = "PHK_fnc_zeusRemoveSpawner";
