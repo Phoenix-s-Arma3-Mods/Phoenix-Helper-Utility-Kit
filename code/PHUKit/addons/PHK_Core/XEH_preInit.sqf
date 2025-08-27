@@ -29,7 +29,7 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
 ] call CBA_fnc_addSetting;
 
 [
-  "PHK_vehicleSpawner_allowCustomClasses"
+  "PHK_vehicleSpawner_allowCustomClasses",
   "CHECKBOX",
   ["Enable: Custom Vehicle Classes", "Allow use of Custom mods/classes at Vehicle Spawner terminals."],
   _cat,
