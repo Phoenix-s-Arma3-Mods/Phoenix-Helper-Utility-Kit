@@ -7,15 +7,29 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
 
 // PHK_Feature_PushVehicle CBA Settings
 [
-  "PHK_enable_feature_pushVehicle","CHECKBOX",
+  "PHK_enable_feature_pushVehicle",
+  "CHECKBOX",
   ["Enable: Push Vehicle","Allow infantry to nudge stuck vehicles."],
-  _cat, true, 1
+  _cat, 
+  true, 
+  1,
+  {},
+  true,
+  {},
+  "Push Vehicle Module"
 ] call CBA_fnc_addSetting;
 
 [
-  "PHK_pushVehicle_distance","SLIDER",
+  "PHK_pushVehicle_distance",
+  "SLIDER",
   ["Push Vehicle: Distance","How far a nudge moves the vehicle."],
-  _cat, [0.2, 3, 1.2, 2], 1
+  _cat, 
+  [0.2, 3, 1.2, 2], 
+  1,
+  {},
+  true,
+  {},
+  "Push Vehicle Module"
 ] call CBA_fnc_addSetting;
 
 // PHK_Feature_VehicleSpawner CBA Settings
@@ -25,7 +39,11 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
   ["Enable: Vehicle Spawner", "Allow use of Vehicle Spawner terminals."],
   _cat,
   true,
-  1
+  1,
+  {},
+  true,
+  {},
+  "Vehicle Spawner Module"
 ] call CBA_fnc_addSetting;
 
 [
@@ -34,7 +52,11 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
   ["Enable: Custom Vehicle Classes", "Allow use of Custom mods/classes at Vehicle Spawner terminals."],
   _cat,
   true,
-  1
+  1,
+  {},
+  true,
+  {},
+  "Vehicle Spawner Module"
 ] call CBA_fnc_addSetting;
 
 [
@@ -43,7 +65,11 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
   ["Custom Vehicle Classes Allowed:", "Input/Remove Custom Vehicle Classes allowable"],
   _cat,
   "",
-  1
+  1,
+  {},
+  true,
+  {},
+  "Vehicle Spawner Module"
 ] call CBA_fnc_addSetting;
 
 [
@@ -52,5 +78,9 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
   ["Enable: Force Side-Only Vehicle Spawns", "Restrict spawnable vehicles to only vehicles available to the Player's Side (Bluefor, Opfor, Independent, Civilian)"],
   _cat,
   false,
-  1
+  1,
+  {},
+  true,
+  {},
+  "Vehicle Spawner Module"
 ] call CBA_fnc_addSetting;
