@@ -5,7 +5,7 @@ if (isNil "CBA_fnc_addSetting") exitWith {}; // CBA safeguard
 
 private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
 
-// PHK_Feature_PushVehicle CBA Settings
+// ----- PHK_Feature_PushVehicle -----
 [
   "PHK_enable_feature_pushVehicle",
   "CHECKBOX",
@@ -31,8 +31,9 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
   {},
   "Push Vehicle Module"
 ] call CBA_fnc_addSetting;
+// ----- End of PHK_Feature_PushVehicle -----
 
-// PHK_Feature_VehicleSpawner CBA Settings
+// ----- Start of PHK_Feature_VehicleSpawner -----
 [
   "PHK_enable_feature_vehicleSpawner",
   "CHECKBOX",
@@ -46,41 +47,43 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
   "Vehicle Spawner Module"
 ] call CBA_fnc_addSetting;
 
-[
-  "PHK_vehicleSpawner_allowCustomClasses",
-  "CHECKBOX",
-  ["Enable: Custom Vehicle Classes", "Allow use of Custom mods/classes at Vehicle Spawner terminals."],
-  _cat,
-  true,
-  1,
-  {},
-  true,
-  {},
-  "Vehicle Spawner Module"
-] call CBA_fnc_addSetting;
+// [
+//   "PHK_vehicleSpawner_allowCustomClasses",
+//   "CHECKBOX",
+//   ["Enable: Custom Vehicle Classes", "Allow use of Custom mods/classes at Vehicle Spawner terminals."],
+//   _cat,
+//   true,
+//   1,
+//   {},
+//   true,
+//   {},
+//   "Vehicle Spawner Module"
+// ] call CBA_fnc_addSetting;
 
-[
-  "PHK_vehicleSpawner_customClasses",
-  "EDITBOX",
-  ["Custom Vehicle Classes Allowed:", "Input/Remove Custom Vehicle Classes allowable"],
-  _cat,
-  "",
-  1,
-  {},
-  true,
-  {},
-  "Vehicle Spawner Module"
-] call CBA_fnc_addSetting;
+// [
+//   "PHK_vehicleSpawner_customClasses",
+//   "EDITBOX",
+//   ["Custom Vehicle Classes Allowed:", "Input/Remove Custom Vehicle Classes allowable"],
+//   _cat,
+//   "",
+//   1,
+//   {},
+//   true,
+//   {},
+//   "Vehicle Spawner Module"
+// ] call CBA_fnc_addSetting;
 
-[
-  "PHK_vehicleSpawner_forceSideOnly",
-  "CHECKBOX",
-  ["Enable: Force Side-Only Vehicle Spawns", "Restrict spawnable vehicles to only vehicles available to the Player's Side (Bluefor, Opfor, Independent, Civilian)"],
-  _cat,
-  false,
-  1,
-  {},
-  true,
-  {},
-  "Vehicle Spawner Module"
-] call CBA_fnc_addSetting;
+// [
+//   "PHK_vehicleSpawner_forceSideOnly",
+//   "CHECKBOX",
+//   ["Enable: Force Side-Only Vehicle Spawns", "Restrict spawnable vehicles to only vehicles available to the Player's Side (Bluefor, Opfor, Independent, Civilian)"],
+//   _cat,
+//   false,
+//   1,
+//   {},
+//   true,
+//   {},
+//   "Vehicle Spawner Module"
+// ] call CBA_fnc_addSetting;
+
+// ----- End of PHK_Feature_VehicleSpawner -----
