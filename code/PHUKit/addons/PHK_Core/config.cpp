@@ -8,6 +8,18 @@ class CfgPatches {
   };
 };
 
+class CfgEditorCategories {
+  class PHK_EdCat_PhuKit {
+    displayName = "PHUKit";
+  };
+};
+
+class CfgEditorSubcategories {
+  class PHK_EdSubcat_Spawning {
+    displayName = "Spawning";
+  };
+};
+
 class CfgFunctions {
   class PHK_Core {
     tag = "PHK";

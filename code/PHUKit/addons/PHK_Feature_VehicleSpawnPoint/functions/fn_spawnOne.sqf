@@ -2,6 +2,8 @@ params ["_point"];
 if (isNull _point) exitWith {};
 if (!isServer) exitWith {};
 
+private _spawnCrewed = _point getVariable ["PHK_VSP_SpawnCrewed", false];
+
 private _already = _point getVariable ["PHK_VSP_Spawned", false];
 if (_already) exitWith {};
 
