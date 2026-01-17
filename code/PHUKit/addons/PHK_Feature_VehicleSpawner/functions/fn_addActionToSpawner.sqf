@@ -22,7 +22,7 @@ private _id = _spawner addAction [
 	"<t color='#4CAF50'>Spawn Helicopter</t>",
 	{ [_this select 0, _this select 1, _this select 2, _this select 3] call PHK_fnc_spawn; },
 	nil, 6, true, true, "",
-	"(['feature_vehicleSpawner'] call PHK_fnc_isFeatureEnabled)"
+	"(['feature_vehicleSpawner'] call PHK_fnc_isFeatureEnabled) && {[_target] call PHK_fnc_canSpawn}"
 ];
 
 _spawner setVariable ["PHK_vehicleSpawner_actionId", _id, true];

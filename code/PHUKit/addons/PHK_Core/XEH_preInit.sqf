@@ -1,35 +1,42 @@
 // Register CBA settings category + any global toggles.
 // Server owners can enable/disable features via Addon Options.
 
+// // // reminder of API structure for future additions // // //
+// [
+//   "varName",
+//   "TYPE",
+//   ["Title","Tooltip"],
+//   <STRING|ARRAY category>, <valueInfo>, <isGlobal?>, // e.g.: [category, subcategory], defaultValue, (0,1,2 - globalSetting)
+//   <onChanged CODE?>,
+//   <needRestart?>
+// ]
+// // // // // // // // // // // // // // // // // // // // //
+
 if (isNil "CBA_fnc_addSetting") exitWith {}; // CBA safeguard
 
-private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
+private _baseCat = "PHUKit - Phoenix's Helper and Utilities Kit";
 
 // ----- PHK_Feature_PushVehicle -----
 [
   "PHK_enable_feature_pushVehicle",
   "CHECKBOX",
   ["Enable: Push Vehicle","Allow infantry to nudge stuck vehicles."],
-  _cat, 
-  true, 
-  1,
-  {},
+  [_baseCat, "Push Vehicle Module"],
   true,
+  2,
   {},
-  "Push Vehicle Module"
+  false
 ] call CBA_fnc_addSetting;
 
 [
   "PHK_pushVehicle_distance",
   "SLIDER",
   ["Push Vehicle: Distance","How far a nudge moves the vehicle."],
-  _cat, 
+  [_baseCat, "Push Vehicle Module"], 
   [0.2, 3, 1.2, 2], 
-  1,
+  2,
   {},
-  true,
-  {},
-  "Push Vehicle Module"
+  false
 ] call CBA_fnc_addSetting;
 // ----- End of PHK_Feature_PushVehicle -----
 
@@ -38,52 +45,44 @@ private _cat = "PHUKit - Phoenix's Helper and Utilities Kit";
   "PHK_enable_feature_vehicleSpawner",
   "CHECKBOX",
   ["Enable: Vehicle Spawner", "Allow use of Vehicle Spawner terminals."],
-  _cat,
+  [_baseCat, "Vehicle Spawner Module"],
   true,
-  1,
+  2,
   {},
-  true,
-  {},
-  "Vehicle Spawner Module"
+  false
 ] call CBA_fnc_addSetting;
 
 // [
 //   "PHK_vehicleSpawner_allowCustomClasses",
 //   "CHECKBOX",
 //   ["Enable: Custom Vehicle Classes", "Allow use of Custom mods/classes at Vehicle Spawner terminals."],
-//   _cat,
+//   [_baseCat, "Vehicle Spawner Module"],
 //   true,
-//   1,
+//   2,
 //   {},
-//   true,
-//   {},
-//   "Vehicle Spawner Module"
+//   false
 // ] call CBA_fnc_addSetting;
 
 // [
 //   "PHK_vehicleSpawner_customClasses",
 //   "EDITBOX",
 //   ["Custom Vehicle Classes Allowed:", "Input/Remove Custom Vehicle Classes allowable"],
-//   _cat,
+//   [_baseCat, "Vehicle Spawner Module"],
 //   "",
-//   1,
+//   2,
 //   {},
-//   true,
-//   {},
-//   "Vehicle Spawner Module"
+//   false
 // ] call CBA_fnc_addSetting;
 
 // [
 //   "PHK_vehicleSpawner_forceSideOnly",
 //   "CHECKBOX",
 //   ["Enable: Force Side-Only Vehicle Spawns", "Restrict spawnable vehicles to only vehicles available to the Player's Side (Bluefor, Opfor, Independent, Civilian)"],
-//   _cat,
+//   [_baseCat, "Vehicle Spawner Module"],
 //   false,
-//   1,
+//   2,
 //   {},
-//   true,
-//   {},
-//   "Vehicle Spawner Module"
+//   false
 // ] call CBA_fnc_addSetting;
 
 // ----- End of PHK_Feature_VehicleSpawner -----
