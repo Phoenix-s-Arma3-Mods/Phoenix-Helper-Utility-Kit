@@ -12,20 +12,20 @@ class CfgFunctions{
         class Feature_VehicleSpawner {
             file = "\phk_feature_vehiclespawner\functions";
 
-            class addAction {};
-            class addActionToSpawner {};
-            class removeActionFromSpawner {};
-            class canSpawn {};
-            class spawn {};
-            class findHelipad {};
+            class vs_addAction {};
+            class vs_addActionToSpawner {};
+            class vs_removeActionFromSpawner {};
+            class vs_canSpawn {};
+            class vs_spawn {};
+            class vs_findHelipad {};
 
-            class spawnServer {};
-            class markSpawnerServer {};
-            class unmarkSpawnerServer {};
+            class vs_spawnServer {};
+            class vs_markSpawnerServer {};
+            class vs_unmarkSpawnerServer {};
 
-            class zeusAddSpawner {};
-            class zeusCreateNewSpawnLocation {};
-            class zeusRemoveSpawner {};
+            class vs_zeusAddSpawner {};
+            class vs_zeusCreateNewSpawnLocation {};
+            class vs_zeusRemoveSpawner {};
         };
     };
 };

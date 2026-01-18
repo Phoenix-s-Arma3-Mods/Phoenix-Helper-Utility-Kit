@@ -126,6 +126,18 @@ private _baseCat = "PHUKit - Phoenix's Helper and Utilities Kit";
 ] call CBA_fnc_addSetting;
 
 [
+  "PHK_sle_clampMassToKg",
+  "SLIDER",
+  ["SLE: Clamp Mass To (kg)", "When hooked, cargo mass is temporarily set to this value (lift kit strength)."],
+  [_baseCat, "Slingloading Extended Module"],
+  [200, 8000, 2000, 0],
+  2,
+  { params ["_value"]; missionNamespace setVariable ["PHK_SLE_clampMassToKg", _value, true]; },
+  false
+] call CBA_fnc_addSetting;
+
+
+[
   "PHK_sle_ropeLength",
   "SLIDER",
   ["SLE: Rope Length (m)", "Rope length used by PHK heavy sling hook. WARNING: Long ropes can be unstable!!"],

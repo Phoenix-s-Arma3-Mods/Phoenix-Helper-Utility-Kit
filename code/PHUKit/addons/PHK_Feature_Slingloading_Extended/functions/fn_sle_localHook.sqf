@@ -2,7 +2,7 @@
   PHK_fnc_sle_localHook
   Must run where _heli is local.
 */
-params ["_heli", "_cargo", "_maxKg", "_clamp", "_ropeLen", "_ropeCnt"];
+params ["_heli", "_cargo", "_maxKg", "_clamp", "_ropeLen", "_ropeCnt", "_clampTo"];
 if (isNull _heli || isNull _cargo) exitWith {};
 if (!local _heli) exitWith {};
 if (!(missionNamespace getVariable ["PHK_SLE_enabled", true])) exitWith {};
@@ -25,12 +25,21 @@ private _origMass = _cargo getVariable ["PHK_SLE_origMass", getMass _cargo];
 private _didClamp = false;
 
 if (_clamp) then {
-  private _newMass = _origMass min _maxKg;
+  private _newMass = _clampTo max 1; // safety
+  // only clamp downward (don’t make light things heavier)
   if (_newMass < _origMass) then {
     _cargo setMass _newMass;
     _didClamp = true;
+
+    // LOGGING / DEBUGGING - TODO: REMOVE ME!
+    diag_log format ["[PHK SLE] Cargo mass: orig=%1 new=%2 max=%3 cargo=%4", _origMass, getMass _cargo, _maxKg, typeOf _cargo];
+    systemChat format ["[PHK SLE] Mass orig=%1 new=%2", round _origMass, round (getMass _cargo)];
+    // end
   };
 };
+
+
+
 _cargo setVariable ["PHK_SLE_didClamp", _didClamp, true];
 
 // Spread points slightly so multiple ropes stabilize better

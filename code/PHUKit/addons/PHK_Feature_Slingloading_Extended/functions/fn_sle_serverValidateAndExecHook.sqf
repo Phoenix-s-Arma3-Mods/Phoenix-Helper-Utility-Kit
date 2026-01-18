@@ -46,7 +46,10 @@ if (_mass > _maxKg) exitWith {
 
 // Execute rope ops where heli is local
 private _owner = owner _heli;
-[_heli, _cargo, _maxKg, _clamp, _ropeLen, _ropeCnt] remoteExecCall ["PHK_fnc_sle_localHook", _owner];
+private _clampTo = missionNamespace getVariable ["PHK_SLE_clampMassToKg", 2000];
+
+[_heli, _cargo, _maxKg, _clamp, _ropeLen, _ropeCnt, _clampTo] remoteExecCall ["PHK_fnc_sle_localHook", _owner];
+
 
 // Clear reservation after we dispatch the remote call
 [_heli] call _clearReserve;
