@@ -23,13 +23,11 @@ class CfgVehicles
         editorSubcategory = "PHK_EdSubcat_Spawning";
 
         // Distinct identity in Eden
-        icon = "\phk_feature_vehiclespawnpoint\data\ui\phk_vsp_ca.paa";
-        editorPreview = "\phk_feature_vehiclespawnpoint\data\ui\phk_vsp_preview_ca.paa";
+        // icon = "\phk_feature_vehiclespawnpoint\data\ui\phk_vsp_ca.paa"; // custom .paa image was having issues loading, using base game for now
+        icon = "\A3\ui_f\data\map\markers\military\triangle_CA.paa";
+        // editorPreview = "\phk_feature_vehiclespawnpoint\data\ui\phk_vsp_preview_ca.paa";
 
         mapSize = 0.5;
-
-        armor = 0;
-        enableSimulation = 0;
     };
 };
 
@@ -78,9 +76,9 @@ class Cfg3DEN
             tooltip = "Delay after mission start before spawning.";
             property = "PHK_VSP_Delay";
             control = "EditShort";
-            expression = "_this setVariable ['PHK_VSP_Delay', parseNumber _value, true];";
-            defaultValue = "'5'";
-            typeName = "STRING";
+            expression = "_this setVariable ['PHK_VSP_Delay', _value, true];";
+            defaultValue = "'3'";
+            typeName = "NUMBER";
           };
 
           class PHK_VSP_DeleteMarker
@@ -108,7 +106,7 @@ class Cfg3DEN
           class PHK_VSP_SpawnCrewed
           {
             displayName = "Spawn crewed";
-            tooltip = "If enabled, spawns the vehicle with its default crew (CfgVehicles >> classname >> crew).";
+            tooltip = "If enabled, spawns the vehicle with its default crew (CfgVehicles >> classname >> crew). WARNING: WILL NOT WORK WITH ALL MODDED VEHICLES.";
             property = "PHK_VSP_SpawnCrewed";
             control = "Checkbox";
             expression = "_this setVariable ['PHK_VSP_SpawnCrewed', _value, true];";

@@ -33,7 +33,7 @@ private _baseCat = "PHUKit - Phoenix's Helper and Utilities Kit";
   "SLIDER",
   ["Push Vehicle: Distance","How far a nudge moves the vehicle."],
   [_baseCat, "Push Vehicle Module"], 
-  [0.2, 3, 1.2, 2], 
+  [0.2, 5, 1.2, 2], 
   2,
   {},
   false

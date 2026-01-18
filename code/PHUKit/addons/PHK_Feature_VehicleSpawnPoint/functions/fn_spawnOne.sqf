@@ -16,15 +16,17 @@ if (!isClass (configFile >> "CfgVehicles" >> _classname)) exitWith {
 };
 
 private _delay = _point getVariable ["PHK_VSP_Delay", 0];
+_delay = _delay max 0;
 private _deleteMarker = _point getVariable ["PHK_VSP_DeleteMarker", true];
 private _align = _point getVariable ["PHK_VSP_AlignToSurface", false];
 
 _point setVariable ["PHK_VSP_Spawned", true, true];
 
-[_point, _classname, _delay, _deleteMarker, _align] spawn {
-	params ["_p", "_cls", "_dly", "_del", "_aln"];
+[_point, _classname, _delay, _deleteMarker, _align, _spawnCrewed] spawn {
+	params ["_p", "_cls", "_dly", "_del", "_aln", "_spawnCrewed"];
 
 	if (_dly > 0) then { uiSleep _dly; };
+	if (isNull _p) exitWith {};
 
 	private _posATL = getPosATL _p;
 	private _dir = getDir _p;
