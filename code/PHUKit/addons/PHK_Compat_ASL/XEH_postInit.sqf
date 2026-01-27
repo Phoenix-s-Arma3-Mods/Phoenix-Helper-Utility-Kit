@@ -2,12 +2,13 @@
   // Wait until ASL postInit has installed its globals
   waitUntil { !isNil "ASL_Rope_Get_Lift_Capability" && !isNil "ASL_Rope_Adjust_Mass" && !isNil "ASL_RemoteExec" };
 
+  waitUntil { !isNil "PHK_enable_feature_aslCompat" };
+
   // --- Override: compute lift capability with PHK global rules ---
   ASL_Rope_Get_Lift_Capability = {
     params ["_vehicle"];
 
     // If disabled, behave like stock ASL (best-effort)
-    waitUntil { !isNil "PHK_enable_feature_aslCompat" };
     if !(missionNamespace getVariable ["PHK_enable_feature_aslCompat", true]) exitWith {
       private _l = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "slingLoadMaxCargoMass");
       if (_l <= 0) then { _l = 4000; };
