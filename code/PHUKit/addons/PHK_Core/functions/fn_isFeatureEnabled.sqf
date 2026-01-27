@@ -15,5 +15,9 @@ private _map = createHashMapFromArray [
 
 
 private _var = _map getOrDefault [_feature, ""];
-if (_var isEqualTo "") exitWith {true}; // unknown → treat as enabled
+ // unknown → treat as enabled
+if (_var isEqualTo "") exitWith {
+  diag_log format ["[PHUKit] Unknown feature key '%1' in isFeatureEnabled", _feature];
+  false
+};
 missionNamespace getVariable [_var, true]
