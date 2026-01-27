@@ -7,6 +7,7 @@
     params ["_vehicle"];
 
     // If disabled, behave like stock ASL (best-effort)
+    waitUntil { !isNil "PHK_enable_feature_aslCompat" };
     if !(missionNamespace getVariable ["PHK_enable_feature_aslCompat", true]) exitWith {
       private _l = getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "slingLoadMaxCargoMass");
       if (_l <= 0) then { _l = 4000; };
