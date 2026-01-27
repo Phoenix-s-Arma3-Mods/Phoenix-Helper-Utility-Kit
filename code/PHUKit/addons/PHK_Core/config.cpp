@@ -2,7 +2,7 @@ class CfgPatches {
   class PHK_Core {
     units[] = {};
     weapons[] = {};
-    requiredAddons[] = {"cba_main"};
+    requiredAddons[] = {"cba_main", "cba_xeh"};
     requiredVersion = 2.06;
     author = "Phoenix";
   };

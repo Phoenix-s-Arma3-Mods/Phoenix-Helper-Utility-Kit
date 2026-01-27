@@ -5,6 +5,7 @@ class CfgPatches {
     requiredVersion = 2.10;
     requiredAddons[] = {
       "cba_main",
+      "cba_xeh",
       "SA_AdvancedSlingLoading",
       "PHK_Core"
     };
